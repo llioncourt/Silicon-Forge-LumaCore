@@ -1,0 +1,13 @@
+{
+  "profile": "statue",
+  "input_dir": "input_png",
+  "output_dir": "output_png",
+  "layer_mm": 0.05,
+  "z0_mm": 0,
+  "index_offset": 0,
+  "reduction": 0.08,
+  "guard_mm": 1.5,
+  "origin_x_mm": 0,
+  "origin_y_mm": 0,
+  "allow_nonstandard": false
+}
