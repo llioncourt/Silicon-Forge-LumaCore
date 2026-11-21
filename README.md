@@ -32,6 +32,8 @@ Archival in progress. Source documents, code and experimental outputs are being 
 ## Scientific foundation (2026-11-21)
 
 - [Literature review, original MATLAB code inspection and implications for M7 Pro](research/REVISAO_CIENTIFICA_GRIN_GMSLA_2026-11-21.md)
+
+- [Anycubic M7 Pro & maker community: UVtools v7 gamma, PWSZ, LUTs, RERF, and physical grayscale measurements](research/ANYCUBIC_M7PRO_COMUNIDADE_GRAYSCALE_2026-11-21.md)
 - [Validation gates and experimental roadmap](https://github.com/llioncourt/Silicon-Forge-LumaCore/issues/2)
 
 The grayscale PWSZ coupon is **not yet GRIN-validated**. Demonstrated in Photon Workshop and physical printing; effect on n(lambda), absorption/scattering and optical beam steering after post-curing remains unmeasured. Research papers use different resins, exposure hardware and calibration and must not be copied as machine settings.
