@@ -30,9 +30,28 @@ if not "%ERR%"=="0" (
 "%PYEXE%" "%~dp0sf_pwsz.py" patch "%SFIN%" "%SFOUT%" >> "logs\ultima_execucao.log" 2>&1
 set "ERR=%ERRORLEVEL%"
 type "logs\ultima_execucao.log"
-if not "%ERR%"=="0" (echo FALHOU - nao use o resultado.) else (
- echo SAIDA GERADA: "%SFOUT%"
- echo VERIFIQUE NO PHOTON WORKSHOP.
+if not "%ERR%"=="0" (
+ echo FALHOU - nao use o resultado.
+ pause
+ exit /b %ERR%
 )
+echo SAIDA EXPERIMENTAL GERADA: "%SFOUT%"
+echo.
+echo Validando automaticamente com UVtools 7.1.2...
+set "UVBRIDGE=%~dp0..\integrations\uvtools\uvtools.ps1"
+if not exist "%UVBRIDGE%" (
+ echo [BLOQUEADO] Ponte UVtools ausente. Nao enviar arquivo para impressao.
+ pause
+ exit /b 3
+)
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%UVBRIDGE%" -Action issues -InputFile "%SFOUT%"
+set "ERR=%ERRORLEVEL%"
+if not "%ERR%"=="0" (
+ echo [BLOQUEADO] Auditoria UVtools falhou. PWSZ experimental foi preservado, NAO APROVADO.
+ pause
+ exit /b %ERR%
+)
+echo Auditoria UVtools executada. Nao equivale a verificacao de cura ou qualidade optica.
+echo Verifique no Photon Workshop antes de qualquer teste fisico.
 pause
-exit /b %ERR%
+exit /b 0
