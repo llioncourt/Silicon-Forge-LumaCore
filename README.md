@@ -37,3 +37,7 @@ Archival in progress. Source documents, code and experimental outputs are being 
 - [Validation gates and experimental roadmap](https://github.com/llioncourt/Silicon-Forge-LumaCore/issues/2)
 
 The grayscale PWSZ coupon is **not yet GRIN-validated**. Demonstrated in Photon Workshop and physical printing; effect on n(lambda), absorption/scattering and optical beam steering after post-curing remains unmeasured. Research papers use different resins, exposure hardware and calibration and must not be copied as machine settings.
+
+## Código de terceiros (com licença)
+
+- [Scripts originais do Aaron Baca — LUT/gamma/dithering, calibração de exposição e superamostragem Z](third_party/aaron1138-UVTools-Scripts/README.md) — cópias não modificadas, com licença GNU AGPL-3.0 e créditos. **Arquivadas para estudo; ainda não integradas nem validadas na M7 Pro.**
