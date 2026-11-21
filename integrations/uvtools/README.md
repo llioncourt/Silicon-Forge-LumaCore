@@ -43,7 +43,7 @@ COMPARAR_PWSZ.bat "C:\Impressao\cupom_original.pwsz" "C:\Impressao\cupom_microdo
 | Local dos downloads/extracao | \`runtime/uvtools\` (ignorado pelo Git) |
 | Logs e arquivos temporarios | \`runtime/logs/uvtools\`, \`runtime/tmp/uvtools\` |
 
-A versao e hash foram confirmados no manifesto oficial de release do GitHub. **O launcher nao foi executado em Windows nesta sessao**; sua validacao real exige execucao na maquina. A tentativa de obter o ZIP de dentro do ambiente de trabalho atual falhou por falta de acesso de rede; o mecanismo de download so funcionara numa maquina com acesso ao dominio GitHub. Nao prometemos instalação inteiramente offline.
+A versao e hash foram confirmados no manifesto oficial de release do GitHub. **Validacao realizada:** GitHub Actions Windows runner baixou o pacote oficial, conferiu SHA-256, extraiu, localizou UVtools.exe, executou o comando de versao e gerou logs com sucesso: https://github.com/llioncourt/Silicon-Forge-LumaCore/actions/runs/44934364389 . **Ainda nao testado no computador do usuario nem auditado um PWSZ real no runner.** O primeiro uso local precisa de acesso ao dominio GitHub e nao constitui instalacao offline.
 
 O wrapper modifica variaveis TEMP, TMP, APPDATA, LOCALAPPDATA e DOTNET_CLI_HOME apenas no seu processo e filhos. Pode haver preferencias adicionais armazenadas pelo proprio Windows/UVtools fora da arvore do app; isso nao foi verificado. Nenhuma instalacao global e realizada pelo wrapper.
 
