@@ -1,0 +1,19 @@
+{
+  "id": "lumacore.uvtools",
+  "upstream": "https://github.com/sn4k3/UVtools",
+  "version": "7.1.2",
+  "tag": "v7.1.2",
+  "released": "2026-10-26",
+  "windows_arch": "x64",
+  "artifact": "UVtools_win-x64_v7.1.2.zip",
+  "download_url": "https://github.com/sn4k3/UVtools/releases/download/v7.1.2/UVtools_win-x64_v7.1.2.zip",
+  "sha256": "8ed807737242738c8772c966f8bd302a214764e439e1e24893fbf9b65a542f41",
+  "license": "AGPL-3.0",
+  "install_scope": "repository/runtime/uvtools/v7.1.2",
+  "working_dir": "repository/runtime",
+  "source_author": "Tiago M. F. Conceição and contributors",
+  "integration_mode": "portable-release-download-verified",
+  "verified_release_manifest": true,
+  "verified_on_windows": false,
+  "notes": "The ZIP is fetched on first launch and checked against upstream GitHub SHA-256. UVtools is not embedded in the repository, and the launcher has not been executed on Windows in this session."
+}
