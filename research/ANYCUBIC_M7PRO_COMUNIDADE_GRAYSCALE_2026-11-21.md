@@ -24,6 +24,15 @@ Releases: https://github.com/sn4k3/UVtools/releases
 - Reddit (relato não revisado por pares): https://www.reddit.com/r/resinprinting/comments/1nlp5k2/psa_16k_printers_do_not_have_fully_functional/ — alguns painéis 16K têm poucas intensidades úteis, o autor sugere que 14K não sofre necessariamente do mesmo problema mas NÃO calibrou a M7 Pro. Nos comentários, observa que Anycubic pode usar profundidade digital de 4 bits e que as resinas respondem de modo muito diferente.
 - A M7 Pro é 14K (13.312x5.120 pixels, 16,8x24,8 µm); e mantém valores PW0 codificados em 4 bits. **Codificação 4-bit != 16 níveis radiométricos distinguíveis garantidos.**
 
+
+## 2A. Atualização confirmada no código de UVtools v7: gamma JÁ implementado
+- A issue #1104 foi encerrada em 08/10/2026 pelo mantenedor com comentário **"Implemented in v7"**. Não é apenas pedido futuro.
+- Código atual: https://github.com/sn4k3/UVtools/blob/master/UVtools.Core/Operations/OperationCalibrateExposureFinder.cs
+- Testes unitários: https://github.com/sn4k3/UVtools/blob/master/tests/UVtools.Tests/OperationCalibrateExposureFinderGammaTests.cs
+- \`OperationCalibrateExposureFinder\` dispõe de \`MultipleBrightnessGamma\`, \`CalculateBrightnessFactor\`, \`CalculateBrightnessFromFactor\`, \`GetDefaultBrightnessValues\`; os testes confirmam com gamma 3 que o nível 204/255 representa 51,2% de dose prevista, e o nível 237/255 cerca de 80%. **Isso valida a implementação matematicamente, não o gamma real da nossa máquina.**
+- Com gamma 3, a LUT de alvo 100, 95, 90, 85, 80, 75% usa níveis 255, 251, 246, 242, 237, 232 nos testes; preciso conferir quantos desses níveis são diferenciáveis na saída PW0 de 4 bits e como o firmware quantiza as cores.
+- Implicação prática: o módulo para uma futura interface pode usar UVtools como validador/fornecedor opcional de calibração, respeitando a licença e sem escondê-lo como dependência externa.
+
 ## 3. Ciência validada em UMA impressora Anycubic
 Turek et al. (2025), *Applied Sciences* 15(13):7412, DOI 10.3390/app15137412.  
 Artigo: https://www.mdpi.com/2076-3417/15/13/7412
