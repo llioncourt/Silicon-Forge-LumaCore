@@ -25,7 +25,7 @@ for tri in tris:
     faces.append([v(x,12,z) for x,z in xyz[::-1]])
 for a,b in zip(outline,outline[1:]+outline[:1]):
     ax,az=a;bx,bz=b
-    a0=v(ax,-12,az);a1=v(ax,12,az);b0=v(bx,-12,az);b1=v(bx,12,bz)
+    a0=v(ax,-12,az);a1=v(ax,12,az);b0=v(bx,-12,bz);b1=v(bx,12,bz)
     faces.extend([[a0,b0,b1],[a0,b1,a1]])
 m=trimesh.Trimesh(vertices=verts,faces=faces,process=True)
 m.fix_normals()
