@@ -48,3 +48,19 @@ The grayscale PWSZ coupon is **not yet GRIN-validated**. Demonstrated in Photon 
 ## Código de terceiros (com licença)
 
 - [Scripts originais do Aaron Baca — LUT/gamma/dithering, calibração de exposição e superamostragem Z](third_party/aaron1138-UVTools-Scripts/README.md) — cópias não modificadas, com licença GNU AGPL-3.0 e créditos. **Arquivadas para estudo; ainda não integradas nem validadas na M7 Pro.**
+
+## Integracao UVtools — Windows portatil
+
+A ferramenta de auditoria de arquivos PWSZ foi integrada em [`integrations/uvtools/`](integrations/uvtools/README.md), fixada em **UVtools v7.1.2** com verificação SHA-256 do download oficial. A primeira execução baixa o pacote portatil para `runtime/` e nao instala componentes globais.
+
+- **Abrir interface:** [`ABRIR_UVTOOLS.bat`](integrations/uvtools/ABRIR_UVTOOLS.bat)
+- **Auditar arquivo sem alterar original:** [`AUDITAR_PWSZ.bat`](integrations/uvtools/AUDITAR_PWSZ.bat)
+- **Comparar original e modificado:** [`COMPARAR_PWSZ.bat`](integrations/uvtools/COMPARAR_PWSZ.bat)
+- **Pipeline antigo do cupom:** `tools/EXECUTAR.bat` agora executa auditoria UVtools apos gerar o PWSZ experimental.
+- **Smoke test:** `.github/workflows/uvtools-windows-smoke.yml`. O script ainda nao foi testado neste ambiente Windows; nao confundir commit com validacao real.
+
+## Research update
+
+- [Anycubic Clear no estudo LCD-GRIN de Liu et al. (2026) e efeitos de dose acumulada](research/ANYCUBIC_CLEAR_LIU_2026_EXPOSICAO_CUMULATIVA.md)
+- [Regras permanentes de implementacao e integridade](AGENTS.md)
+
