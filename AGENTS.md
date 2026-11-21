@@ -34,3 +34,10 @@
 ## Proximas entregas
 - Acompanhar `issues/2` nos gates: irradiancia real, cura/persistencia do indice, simulacao de transporte, otimizacao e QA.
 - `issues/1`: arquivos STL/PWSZ binarios ainda faltantes no repositorio; nunca fechar ate verificar download direto.
+
+## Suportes / cena editavel antes da microdosagem (correcao obrigatoria)
+- Um `.pwsz` salvo diretamente e um arquivo **ja fatiado**, nao um projeto nativo editavel com suportes. O Photon Workshop nao consegue necessariamente voltar a uma cena apos abrir apenas `Slice File Preview`.
+- Para qualquer escultura, seguir **STL aprovado -> Photon Workshop -> orientacao e suportes -> salvar cena editavel `.pwscene` -> fatiamento `.pwsz` NATIVO -> aplicar mapa UV SOMENTE na copia do fatiado com suportes -> UVtools/Photon Workshop QA**.
+- Nunca entregar um PWSZ final sem que suportes tenham sido adicionados/verificados e a cena editavel do slicer esteja preservada. Se nao for possivel gerar/validar uma cena `.pwscene`, declarar pendente e entregar o STL para edicao; nao chamar o PWSZ experimental de imprimivel.
+- Ao modificar grayscale em camadas ja fatiadas, separar pixels de suportes dos pixels do modelo (ou preservar toda a estrutura dos suportes com valores originais), validar ilhas e integridade com UVtools.
+- Regra especifica deste projeto: **plinto LED da escultura ja estava aprovado**. Nao criar outro plinto e nao alterar qualquer geometria sem permissao.
