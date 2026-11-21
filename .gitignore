@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+runtime/
+*.part
+*.tmp
+logs/
+output_png/
+input_png/
+.DS_Store
