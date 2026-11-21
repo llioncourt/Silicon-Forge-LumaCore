@@ -38,6 +38,13 @@ Archival in progress. Source documents, code and experimental outputs are being 
 
 The grayscale PWSZ coupon is **not yet GRIN-validated**. Demonstrated in Photon Workshop and physical printing; effect on n(lambda), absorption/scattering and optical beam steering after post-curing remains unmeasured. Research papers use different resins, exposure hardware and calibration and must not be copied as machine settings.
 
+
+## UVtools and optical-waveguide findings (2026-11-21)
+
+- [UVtools/M7 Pro deep dive: native files, grayscale calibration, known bugs, and 2026 polymer-waveguide research](research/UVTOOLS_M7PRO_WAVEGUIDES_DEEPDIVE_2026-11-21.md)
+- UVtools v7.1.2 Windows portable: [official ZIP](https://github.com/sn4k3/UVtools/releases/download/v7.1.2/UVtools_win-x64_v7.1.2.zip)
+- **Important:** grayscale levels seen in Photon Workshop are not calibrated physical UV doses, and a glossy coating is not evidence of internal optical waveguiding.
+
 ## Código de terceiros (com licença)
 
 - [Scripts originais do Aaron Baca — LUT/gamma/dithering, calibração de exposição e superamostragem Z](third_party/aaron1138-UVTools-Scripts/README.md) — cópias não modificadas, com licença GNU AGPL-3.0 e créditos. **Arquivadas para estudo; ainda não integradas nem validadas na M7 Pro.**
