@@ -1,0 +1,14 @@
+{
+  "printer": "Anycubic Photon Mono M7 Pro",
+  "resin_profile": "Anycubic Standard Resin",
+  "physical_resin": "translucent blue",
+  "release_film": "ACF",
+  "print_mode": "Normal Print",
+  "layer_thickness_mm": 0.05,
+  "normal_exposure_s": 1.8,
+  "bottom_exposure_s": 25,
+  "bottom_layers": 5,
+  "total_layers_coupon": 80,
+  "finish": "Unipega high gloss",
+  "notes": "Bottom-layer numbers extracted from uploaded coupon PWSZ; not inferred from screenshot."
+}
