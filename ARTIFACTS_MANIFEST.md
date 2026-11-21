@@ -7,7 +7,7 @@ These binaries were generated or received during the LumaCore research session. 
 | Original sculpture STL | 80,000,084 | `82a04ecb8e044fc99840d757a4826bf27f4319383a35592008701d9ddd2b653c` | Not uploaded |
 | LED plinth STL (winding revision) | 74,286,684 | `736d58fd2525f57286bb96bfcc3596be7b10dd2aaa2fadb4ed6e681587d86dd9` | Not uploaded |
 | Dose calibration coupon STL | 684 | `c0e0861c11e79a1857ffa978efa4b8d6e0d3bd254b5e624f654fdf6cb87ce96e` | `experiments/m7pro_coupon/CUPOM_CALIBRACAO_DOSE_UMA_PECA.stl` |
-| Thickness calibration coupon STL | 2,284 | `c37739d2a851f97b42c5bbcd1b140d71ffc8ecd8bc286a04b625b4e0d5bae33c` | Not uploaded |
+| Thickness calibration coupon STL | 2,284 | `c37739d2a851f97b42c5bbcd1b140d71ffc8ecd8bc286a04b625b4e0d5bae33c` | `experiments/m7pro_coupon/CUPOM_CALIBRACAO_UMA_PECA.stl` |
 | Original Photon Workshop coupon PWSZ | 46,128 | `0725948a2acfcee7b37643b903e47e235dbd0a035635394e681a427a0c910d63` | Not uploaded |
 | Raster control PWSZ | 38,368 | `106aefb7660179fdb094e8e1e9b27ee7d39703587d6e47e87cb1d31f56f8bcdd` | Not uploaded |
 | Microdosed three-band PWSZ | 75,424 | `f72352c183b2adb8b4b87b9f5493c696212b059f035f2d1b517285a584169ff8` | Not uploaded |
