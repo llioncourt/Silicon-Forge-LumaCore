@@ -57,7 +57,7 @@ A ferramenta de auditoria de arquivos PWSZ foi integrada em [`integrations/uvtoo
 - **Auditar arquivo sem alterar original:** [`AUDITAR_PWSZ.bat`](integrations/uvtools/AUDITAR_PWSZ.bat)
 - **Comparar original e modificado:** [`COMPARAR_PWSZ.bat`](integrations/uvtools/COMPARAR_PWSZ.bat)
 - **Pipeline antigo do cupom:** `tools/EXECUTAR.bat` agora executa auditoria UVtools apos gerar o PWSZ experimental.
-- **Smoke test:** `.github/workflows/uvtools-windows-smoke.yml`. O script ainda nao foi testado neste ambiente Windows; nao confundir commit com validacao real.
+- **Smoke test:** `.github/workflows/uvtools-windows-smoke.yml`. [Windows CI aprovado](https://github.com/llioncourt/Silicon-Forge-LumaCore/actions/runs/44934364389): download, SHA-256, extracao, executavel, CLI e logs. Auditoria real de PWSZ ainda pendente.
 
 ## Research update
 
