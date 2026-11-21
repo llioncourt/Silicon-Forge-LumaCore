@@ -44,6 +44,10 @@ Artigo: https://www.mdpi.com/2076-3417/15/13/7412
 - Provaram **uniformização UV e melhora geométrica**, NÃO guia de luz visível ou GRIN interno.
 - Boa referência de projeto de calibração M7 Pro: medir posições, ajustar \`I(G,x,y)\`, otimizar exposição; não usar a curva da M3 Premium na M7.
 
+
+### Observação crítica do artigo Anycubic (M3 Premium)
+O artigo de Turek et al. relata explicitamente que **a irradiância não varia a cada incremento unitário do valor de cinza** no equipamento M3 Premium usado. Assim, mesmo um painel que aceita 16 ou 256 códigos de cinza pode ter *platôs* na resposta física. Este resultado não demonstra platôs na M7 Pro, mas reforça a prioridade de comparar 13/15 e 14/15 por **medição física**, não por visualização do PWSZ.
+
 ## 4. Hacks públicos de grayscale e anti-aliasing em resina
 - https://github.com/aaron1138/UVTools-Scripts e https://github.com/aaron1138/Voxel-Stack-Blender
 - O criador publicou scripts C# para UVtools: \`VerticalSuperSampler-LUT-FSDithering.cs\`, \`ApplyLUTandFSDithering.cs\`, \`ExposureCalibrationMasking.cs\`, \`ScriptLUTEngine.cs\`, e algoritmos de campo de distância e mistura entre camadas.
