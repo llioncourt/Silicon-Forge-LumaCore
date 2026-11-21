@@ -1,0 +1,29 @@
+{
+  "layers": 80,
+  "changed_layers": 48,
+  "unchanged_layers": 32,
+  "changed_pixels": 131049600,
+  "new_on_pixels": 0,
+  "new_off_pixels": 0,
+  "bottom_or_transition_changed": 0,
+  "last_layers_changed": 0,
+  "tone_distribution_mod_layers": {
+    "20": {
+      "13": 1365100,
+      "14": 1365100
+    },
+    "21": {
+      "13": 1365100,
+      "14": 1365100
+    },
+    "30": {
+      "13": 1365100,
+      "14": 1365100
+    },
+    "67": {
+      "13": 1365100,
+      "14": 1365100
+    }
+  },
+  "note": "Dados extraidos de auditoria independente previa; inspecao de camadas aceita pelo Photon Workshop, teste fisico ainda pendente."
+}
