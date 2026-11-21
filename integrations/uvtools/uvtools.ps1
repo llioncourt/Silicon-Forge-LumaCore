@@ -179,7 +179,11 @@ try {
             $args = @()
             if ($InputFile) { $args = @('"' + (Resolve-Input $InputFile) + '"') }
             Write-Log 'Abrindo UVtools GUI.'
-            Start-Process -FilePath $exe -WorkingDirectory (Split-Path -Parent $exe) -ArgumentList $args | Out-Null
+            if ($args.Count -gt 0) {
+                Start-Process -FilePath $exe -WorkingDirectory (Split-Path -Parent $exe) -ArgumentList $args | Out-Null
+            } else {
+                Start-Process -FilePath $exe -WorkingDirectory (Split-Path -Parent $exe) | Out-Null
+            }
             break
         }
         'inspect' { Audit-File $InputFile $false; break }
