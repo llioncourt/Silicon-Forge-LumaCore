@@ -1,0 +1,45 @@
+name: UVtools portable Windows smoke test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'integrations/uvtools/**'
+      - '.github/workflows/uvtools-windows-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  uvtools-windows:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout LumaCore
+        uses: actions/checkout@v4
+
+      - name: Download and verify portable UVtools
+        shell: pwsh
+        run: |
+          & .\integrations\uvtools\uvtools.ps1 -Action install
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: Check installed executable
+        shell: pwsh
+        run: |
+          $exe = Join-Path $PWD 'runtime\uvtools\v7.1.2\UVtools.exe'
+          if (-not (Test-Path -LiteralPath $exe)) { throw "UVtools.exe nao foi instalado: $exe" }
+          Write-Host "Executable: $exe"
+
+      - name: Smoke test official CLI version
+        shell: pwsh
+        run: |
+          & .\integrations\uvtools\uvtools.ps1 -Action version
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+
+      - name: Inspect local logging
+        shell: pwsh
+        run: |
+          $log = Join-Path $PWD 'runtime\logs\uvtools\bridge.log'
+          if (-not (Test-Path -LiteralPath $log)) { throw "Logging nao foi inicializado" }
+          Get-Content -LiteralPath $log -Tail 12
