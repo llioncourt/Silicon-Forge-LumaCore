@@ -41,3 +41,10 @@
 - Nunca entregar um PWSZ final sem que suportes tenham sido adicionados/verificados e a cena editavel do slicer esteja preservada. Se nao for possivel gerar/validar uma cena `.pwscene`, declarar pendente e entregar o STL para edicao; nao chamar o PWSZ experimental de imprimivel.
 - Ao modificar grayscale em camadas ja fatiadas, separar pixels de suportes dos pixels do modelo (ou preservar toda a estrutura dos suportes com valores originais), validar ilhas e integridade com UVtools.
 - Regra especifica deste projeto: **plinto LED da escultura ja estava aprovado**. Nao criar outro plinto e nao alterar qualquer geometria sem permissao.
+
+## Autorização obrigatória para workflows e automações (regra do proprietário)
+
+- É proibido criar, configurar ou habilitar workflows automáticos (inclusive GitHub Actions acionados por push, pull request, cron, schedule, webhook ou outros eventos), agendamentos, tarefas recorrentes ou agentes autônomos sem autorização específica, expressa e prévia do proprietário.
+- Antes de criar **qualquer** workflow, inclusive manual (`workflow_dispatch`), ou modificar, reativar ou reinstalar um workflow existente, explique ao proprietário sua finalidade, necessidade, gatilhos, frequência, efeitos, permissões, custos/riscos e alternativa manual/local. Solicite autorização e aguarde resposta afirmativa. Não crie o arquivo nem ative a execução antes disso.
+- A autorização geral para trabalhar no repositório, fazer commits/push ou executar testes não equivale à autorização para criar ou alterar workflows. Não contorne a regra por scripts, serviços externos ou outras branches. Prefira testes e ferramentas locais executados sob demanda.
+- Esta regra prevalece sobre instruções anteriores conflitantes. Workflows existentes não constituem autorização para criar novos.
